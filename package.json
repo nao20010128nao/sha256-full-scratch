@@ -1,0 +1,20 @@
+{
+  "name": "sha256-full-scratch",
+  "version": "1.0.0",
+  "description": "SHA256 full scratch in JavaScript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nao20010128nao/sha256-full-scratch.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nao20010128nao/sha256-full-scratch/issues"
+  },
+  "homepage": "https://github.com/nao20010128nao/sha256-full-scratch#readme"
+}
