@@ -6,11 +6,17 @@
  * @param {number} blockSize
  * @returns {Buffer}
  */
-function pad(x, blockSize = 512) {
-  const remainedBlockBytes = x.length % (blockSize / 8);
+function pad(x) {
+  const blockSize = 512;
+  const blockBytes = blockSize / 8;
+  const remainedBlockBytes = x.length % blockBytes;
   const L = remainedBlockBytes * 8;
-  const expectedBytesB = blockSize / 8 - 8;
-  const bytesToAppendB = expectedBytesB - remainedBlockBytes;
+  const expectedBytesB = blockBytes - 8;
+  let bytesToAppendB = expectedBytesB - remainedBlockBytes;
+  if (bytesToAppendB < 0) {
+    bytesToAppendB += blockBytes;
+  }
+  console.log(bytesToAppendB);
   const bufferToConcat = Buffer.alloc(bytesToAppendB);
   bufferToConcat[0] = 0x80;
 
