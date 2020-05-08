@@ -132,14 +132,4 @@ function rotl(x, n) {
   return or(shl(x, n), shr(x, w - n));
 }
 
-module.exports = {
-  and,
-  or,
-  xor,
-  not,
-  add,
-  shr,
-  shl,
-  rotr,
-  rotl,
-};
+module.exports = { and, or, xor, not, add, shr, shl, rotr, rotl };
