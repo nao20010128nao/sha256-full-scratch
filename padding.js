@@ -16,7 +16,7 @@ function pad(x) {
   if (bytesToAppendB < 0) {
     bytesToAppendB += blockBytes;
   }
-  console.log(bytesToAppendB);
+  //console.log(bytesToAppendB);
   const bufferToConcat = Buffer.alloc(bytesToAppendB);
   bufferToConcat[0] = 0x80;
 
