@@ -3,14 +3,14 @@
 /**
  * Padding. Section 4.
  * @param {Buffer} x Buffer to be padded
- * @param {number} blockSize
+ * @param {number} recentlyWritten
  * @returns {Buffer}
  */
-function pad(x) {
+function pad(x, recentlyWritten = 0) {
   const blockSize = 512;
   const blockBytes = blockSize / 8;
   const remainedBlockBytes = x.length % blockBytes;
-  const L = remainedBlockBytes * 8;
+  const L = recentlyWritten || remainedBlockBytes * 8;
   const expectedBytesB = blockBytes - 8;
   let bytesToAppendB = expectedBytesB - remainedBlockBytes;
   if (bytesToAppendB < 0) {
